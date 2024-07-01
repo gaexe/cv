@@ -41,7 +41,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* button style */
 .btn, .btn.disabled {
-    background: #fc921f;;
+    background: #121212;
     color: #ffffff;
     border: 0;
     border-radius: 20px;
