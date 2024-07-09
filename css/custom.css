@@ -22,7 +22,7 @@ iframe.blogshot {
 
 /* common style's */
 a {
-  color: #7447ae;
+  color: #FFC107;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   transition: all 0.5s;
@@ -309,7 +309,7 @@ label {
 .ticketBox .ticket-price-count-box .ticket-control .input-group .input-group-btn button:hover,
 .ticketBox .ticket-price-count-box .ticket-control .input-group .input-group-btn button:focus {
 	outline: none;
-	background: rgb(255 127 0 / 82%);
+	background: #FFC107;
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 }
@@ -325,7 +325,7 @@ label {
     padding-right: 12px;
     position: absolute;
     bottom: 0;
-    background: rgba(255, 255, 0, 0.901);
+    background: #ffc107e0;
     padding-bottom: 8px;
     padding-top: 8px;
     border-radius: 8px;
@@ -589,5 +589,39 @@ iframe {
     display: block;
 }
 
+}
+
+/*social*/
+.social:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.social {
+    -webkit-transform: scale(0.8);
+    /* Browser Variations: */
+    
+    -moz-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    -webkit-transition-duration: 0.5s;
+    -moz-transition-duration: 0.5s;
+    -o-transition-duration: 0.5s;
+}
+
+/*
+   Multicoloured Hover Variations
+*/
+
+#social-fb:hover {
+    color: #3B5998;
+}
+#social-tw:hover {
+    color: #4099FF;
+}
+#social-gp:hover {
+    color: #d34836;
+}
+#social-em:hover {
+    color: #f39c12;
 }
 
