@@ -162,7 +162,8 @@ Created by pixpalette.com - online design magazine -->
                     <div class="cart-information">
                         <div class="ticket-type"></div>
                         <ul>
-                            <li id="idProduct">Halo Wawan, saya hadir dari situs portfolio Anda dan perkenankan saya untuk memperkenalkan diri terlebih dahulu.</li>
+                            <li id="idProduct">Halo Wawan, saya hadir dari situs portfolio Anda dan perkenankan saya
+                                untuk memperkenalkan diri terlebih dahulu.</li>
                             <hr>
                             <li><br></li>
                             <li><label style="font-size: 12px;"><input type="checkbox" class="tos" id="tos" name="tos"
@@ -196,6 +197,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/simboku.jpg",
                 hyperlink: "https://play.google.com/store/apps/details?id=com.simboku.trip_app&pcampaignid=web_share",
+                alert: "",
                 title: "Simbok-ku",
                 sub_title: "Flutter (Android)",
                 price_value: 180000,
@@ -208,6 +210,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/lesja.jpg",
                 hyperlink: "https://play.google.com/store/apps/details?id=com.bundet.lesja&hl=id&gl=US",
+                alert: "",
                 title: "Lesja",
                 sub_title: "Flutter (Android & iOS)",
                 price_value: 180000,
@@ -222,6 +225,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/panca.jpg",
                 hyperlink: "documents/panca-manual.pdf",
+                alert: "",
                 title: "MySales Panca",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -233,6 +237,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/movie-made.jpg",
                 hyperlink: "https://gitlab.com/bundet/movie-catalogue-submissions",
+                alert: "",
                 title: "The Movie MADE",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -244,6 +249,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/esda.jpg",
                 hyperlink: "https://youtu.be/jce20RhcTHo",
+                alert: "",
                 title: "ESDA",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -255,6 +261,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/chatrox.jpg",
                 hyperlink: "https://gitlab.com/gaexe/chatrox-mvvm",
+                alert: "",
                 title: "Chatrox",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -266,6 +273,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/unspay.jpg",
                 hyperlink: "https://gitlab.com/gaexe/unspay",
+                alert: "",
                 title: "UNS Pay",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -277,6 +285,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/supercar.jpg",
                 hyperlink: "https://gitlab.com/gaexe/hfw-supercar-apps",
+                alert: "",
                 title: "Montir Supercar",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -288,6 +297,7 @@ Created by pixpalette.com - online design magazine -->
             {
                 img: "images/ph7.jpg",
                 hyperlink: "https://gitlab.com/gaexe/ph7-network",
+                alert: "",
                 title: "PH7 Network",
                 sub_title: "Kotlin",
                 price_value: 180000,
@@ -295,6 +305,18 @@ Created by pixpalette.com - online design magazine -->
                 description: `
                     PH7 Network adalah perusahaan terapis di Yogyakarta. Ini adalah proyek skripsi milik sebuah perguruan tinggi di salah satu universitas di Yogyakarta.
                     <br><br>Saya telah menyelesaikan terapis online di Jogja alias PH7 Network dalam waktu seminggu.
+                    `
+            },
+            {
+                img: "images/madanium.jpg",
+                hyperlink: "#",
+                alert: "Akses ke repository tidak tersedia!",
+                title: "Madanium",
+                sub_title: "Kotlin",
+                price_value: 180000,
+                price_display: "Legacy",
+                description: `
+                    Aplikasi broker untuk menyimpan nilai dari fiat ke dinar atau dirham yang berbasis di Yogyakarta. Saya telah berkontribusi dalam memperbaiki bug dan meningkatkan UI/UX.
                     `
             },
 
@@ -336,7 +358,7 @@ Created by pixpalette.com - online design magazine -->
                                                                         max="10" style="visibility:hidden">
                                                                     <span class="input-group-btn">
                                                                         <button type="button"
-                                                                            onclick="window.open('${item.hyperlink}');"
+                                                                            onclick="goTo('${item.hyperlink}', '${item.alert}');"
                                                                             id="btn_number"
                                                                             class="btn btn-default btn-number"
                                                                             data-type="plus" data-field="quant[6]">
@@ -359,6 +381,15 @@ Created by pixpalette.com - online design magazine -->
                                             </div>
                                         </div>
                 `;
+        }
+
+        //goto
+        function goTo(url, alert) {
+            if (url != "#") {
+                window.open(url);
+            } else {
+                confirm(alert);
+            }
         }
     </script>
 
