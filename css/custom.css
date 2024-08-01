@@ -963,4 +963,8 @@ footer { padding: 20px 0; background-color: #333; position: absolute; bottom: 0;
 
 .timeline-heading { font-size: 20px; }
 
+.label {
+    font-size: 85%;
+}
+
 
